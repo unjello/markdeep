@@ -26,6 +26,22 @@ body {
     }
 }
 
+/* for really wide screens */
+@media screen and (min-width: 1600px) and (min-width: 100em) {
+  .md.wideScreen .longTOC, .md.wideScreen .mediumTOC, .md.wideScreen .shortTOC {
+    left: 88vw;
+    max-width: 12vw;
+    overflow-y: auto;
+  }
+  body {
+    max-width: 100%;
+  }
+  .md.wideScreen {
+    max-width: 85vw;
+    display: block;
+  }
+}
+
 /* for narrow screens or print, hide table of contents */
 @media screen and (max-width: 64em) {
     .md .longTOC, .md .mediumTOC, .md .shortTOC { display: none; }

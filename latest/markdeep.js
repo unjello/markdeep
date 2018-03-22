@@ -949,6 +949,7 @@ var DEFAULT_OPTIONS = {
     hideEmptyWeekends:  true,
     showLabels:         false,
     sortScheduleLists:  true,
+    wideScreen:         false,
     captionAbove:       {diagram: false,
                          image:   false,
                          table:   false,
@@ -2759,7 +2760,8 @@ function markdeepToHTML(str, elementMode) {
         }
     });
 
-    return '<span class="md">' + entag('p', str) + '</span>';
+    var wideScreen = option('wideScreen');
+    return (wideScreen === true ? '<span class="md wideScreen">' : '<span class="md">') + entag('p', str) + '</span>';
 }
 
 

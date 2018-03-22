@@ -10,6 +10,11 @@ body {
     padding: 0 1em;
 }
 
+.md {
+  max-width: 50em;
+  display: block;
+}
+
 /* if screen is wide enough, put table of contents on the right side */
 @media screen and (min-width: 64em) {
     .md .longTOC, .md .mediumTOC, .md .shortTOC {
